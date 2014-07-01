@@ -80,6 +80,44 @@
     }
   </style>
   <!-- @endif -->
+  <!-- @if tests=false -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .toolbar {
+      margin-bottom: 1em;
+    }
+
+    button {
+      height: 3em;
+    }
+
+    button.active {
+      border-style: inset;
+    }
+
+    .scribe {
+      height: 370px;
+      overflow: auto;
+      margin-bottom: 1em;
+      border: 1px solid hsl(0, 0%, 80%);
+      padding: 0.5em;
+    }
+
+    .scribe-html {
+      width: 100%;
+      font-family: monospace;
+      border: 1px solid hsl(0, 0%, 80%);
+      padding: 0.5em;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  </style>
+  <!-- @endif -->
 
 </head>
 <body>
@@ -105,6 +143,6 @@
     window.App = require('ember-scribe/app')["default"].create();
   </script>
   <!-- @endif -->
-
+  <textarea class="scribe-html" rows="15"></textarea>
 </body>
 </html>
